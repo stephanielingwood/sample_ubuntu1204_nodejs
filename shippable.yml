@@ -15,7 +15,7 @@ before_install:
   - npm install -g grunt-cli
 
 install:
-  - npm install
+  - shippable_retry npm cache ls && npm cache clean && npm install
   
 # Running the tests with grunt
 script:
